@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "api for generating dice rolls",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon .src/app.js"
+    "dev": "nodemon ./src/app.js",
+    "lint": "eslint ./src --fix",
+    "prettier": "prettier ./src --check",
+    "prettier:fix": "prettier ./src --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "professorxavi",
   "license": "ISC",
@@ -14,7 +18,11 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.3"
   }
 }
