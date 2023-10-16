@@ -3,7 +3,7 @@ import findInArray from "../utils/findInArray.js";
 import stringReplace from "../utils/stringReplace.js";
 
 import fs from "fs";
-var OotA = JSON.parse(fs.readFileSync("../tables/OotA.json", "utf8"));
+const OotA = JSON.parse(fs.readFileSync("./src/tables/OotA.json", "utf8"));
 
 export default function buildEncounters(desiredTable, die, roll) {
   const table = OotA[desiredTable];
@@ -17,7 +17,7 @@ export default function buildEncounters(desiredTable, die, roll) {
     encounterObj.description = encounter.description;
   }
 
-  if (encounter.additionalRolls.length !== 0) {
+  if (encounter.additionalRolls.length) {
     for (const additionalRoll of encounter.additionalRolls) {
       const key = additionalRoll.name;
       if (additionalRoll.table) {

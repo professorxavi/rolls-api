@@ -196,11 +196,11 @@ const terrainTable = [
     summary: "Steam vent",
     description:
       "A hot steam vent erupts beneath a random party member, who must succeed on a DC 12 Dexterity saving throw or take $REPLACE fire damage.",
-    additionalRolls: [{ name: "bludgeoning-damage", numberOfDice: 2, die: 6 }],
+    additionalRolls: [{ name: "fire-damage", numberOfDice: 2, die: 6 }],
     replace: [
       {
         target: "$REPLACE",
-        value: "bludgeoning-damage",
+        value: "fire-damage",
       },
     ],
   },
